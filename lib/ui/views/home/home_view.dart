@@ -14,10 +14,29 @@ class HomeView extends StatelessWidget {
         Widget? child,
       ) {
         return Scaffold(
-          body: Center(
-            child: Text(
-              'HomeView',
-            ),
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'HomeView',
+                  ),
+                ],
+              ),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 10),
+                child: MaterialButton(
+                  onPressed: model.toAboutView,
+                  color: Theme.of(context).primaryColor,
+                  elevation: 0,
+                  minWidth: double.infinity,
+                  child: Text('Go to About'),
+                ),
+              )
+            ],
           ),
         );
       },
