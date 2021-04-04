@@ -14,6 +14,15 @@ class HomeView extends StatelessWidget {
         Widget? child,
       ) {
         return Scaffold(
+          appBar: AppBar(
+            title: Text('HomeView'),
+            actions: [
+              IconButton(
+                icon: Icon(Icons.alternate_email),
+                onPressed: model.toAboutView,
+              ),
+            ],
+          ),
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -26,17 +35,11 @@ class HomeView extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 10),
-                child: MaterialButton(
-                  onPressed: model.toAboutView,
-                  color: Theme.of(context).primaryColor,
-                  elevation: 0,
-                  minWidth: double.infinity,
-                  child: Text('Go to About'),
-                ),
-              )
             ],
+          ),
+          floatingActionButton: FloatingActionButton.extended(
+            onPressed: () {},
+            label: Text('Click'),
           ),
         );
       },

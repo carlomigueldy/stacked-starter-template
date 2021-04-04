@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:stacked_starter_template/app/app.locator.dart';
 import 'package:stacked_starter_template/app/app.router.dart';
@@ -17,7 +18,9 @@ class App extends StatelessWidget {
     return ThemeBuilder(
       themes: [
         ThemeData(
-          primaryColor: Colors.purple,
+          primaryColor: Colors.blue,
+          primarySwatch: Colors.blue,
+          fontFamily: GoogleFonts.montserrat().fontFamily,
         ),
         ThemeData(primaryColor: Colors.red),
         ThemeData(primaryColor: Colors.green),

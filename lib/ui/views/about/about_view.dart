@@ -14,6 +14,9 @@ class AboutView extends StatelessWidget {
         Widget? child,
       ) {
         return Scaffold(
+          appBar: AppBar(
+            title: Text('AboutView'),
+          ),
           body: Center(
             child: Text(
               'AboutView',
