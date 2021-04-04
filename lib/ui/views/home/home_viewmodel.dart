@@ -9,4 +9,12 @@ class HomeViewModel extends BaseViewModel {
   toAboutView() {
     navigationService.navigateTo(Routes.aboutView);
   }
+
+  void toDemoListView() {
+    navigationService.navigateTo(Routes.demoListView);
+  }
+
+  void toSingleItemView() {
+    navigationService.navigateTo(Routes.singleItemView);
+  }
 }

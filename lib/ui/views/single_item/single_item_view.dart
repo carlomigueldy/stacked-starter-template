@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import 'about_viewmodel.dart';
+import 'single_item_viewmodel.dart';
 
-class AboutView extends StatelessWidget {
+class SingleItemView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<AboutViewModel>.reactive(
-      viewModelBuilder: () => AboutViewModel(),
+    return ViewModelBuilder<SingleItemViewModel>.reactive(
+      viewModelBuilder: () => SingleItemViewModel(),
       builder: (
         BuildContext context,
-        AboutViewModel model,
+        SingleItemViewModel model,
         Widget? child,
       ) {
         return Scaffold(
-          appBar: AppBar(
-            title: Text('About View'),
-          ),
+          appBar: AppBar(title: Text('Single Item View')),
           body: Center(
             child: Text(
-              'AboutView',
+              'SingleItemView',
             ),
           ),
         );

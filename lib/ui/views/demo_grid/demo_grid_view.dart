@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import 'about_viewmodel.dart';
+import 'demo_grid_viewmodel.dart';
 
-class AboutView extends StatelessWidget {
+class DemoGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<AboutViewModel>.reactive(
-      viewModelBuilder: () => AboutViewModel(),
+    return ViewModelBuilder<DemoGridViewModel>.reactive(
+      viewModelBuilder: () => DemoGridViewModel(),
       builder: (
         BuildContext context,
-        AboutViewModel model,
+        DemoGridViewModel model,
         Widget? child,
       ) {
         return Scaffold(
-          appBar: AppBar(
-            title: Text('About View'),
-          ),
+          appBar: AppBar(title: Text('Demo Grid View')),
           body: Center(
             child: Text(
-              'AboutView',
+              'DemoGridView',
             ),
           ),
         );
